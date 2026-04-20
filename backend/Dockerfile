@@ -1,6 +1,6 @@
 FROM alpine:3.23.4
 
-RUN apk add --update --no-cache python3
+RUN apk add --update --no-cache python3 curl
 
 WORKDIR /opt/
 USER 1000:1000

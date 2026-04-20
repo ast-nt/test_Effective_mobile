@@ -1,13 +1,15 @@
-version: '3.8'
+#version: '3.8'
 
 services:
   backend.app:
     build: # "context" and "dockerfile" fields have to be under "build"
       context: ./backend
-      dockerfile: ./backend/Dockerfile
+      dockerfile: Dockerfile
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/"]
-      interval: 5s
+      start_interval: 1s
+      start_period: 5s
+      interval: 15s
       timeout: 5s
       retries: 3
 
