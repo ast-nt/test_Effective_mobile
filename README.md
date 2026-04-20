@@ -5,7 +5,7 @@
 ```
 git clone https://github.com/ast-nt/test_Effective_mobile
 cd test_Effective_mobile
-docker compose up
+docker compose up -d
 ```
 
 # Как проверить результат работы проекта
