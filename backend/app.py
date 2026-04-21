@@ -5,7 +5,7 @@ class AppHandler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type", "text/html; charset=utf-8")
         self.end_headers()
-        self.wfile.write("Hello from Effective Mobile!".encode("utf-8"))
+        self.wfile.write('\"Hello from Effective Mobile!\"'.encode("utf-8"))
 
 server_hostname = ""
 server_port = 8080
