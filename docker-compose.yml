@@ -1,8 +1,6 @@
-#version: '3.8'
-
 services:
   backend.app:
-    build: # "context" and "dockerfile" fields have to be under "build"
+    build: 
       context: ./backend
       dockerfile: Dockerfile
     read_only: true
@@ -24,13 +22,6 @@ services:
           backend.app:
             condition: service_healthy
             restart: true    
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:80/"]
-      start_interval: 1s
-      start_period: 5s
-      interval: 15s
-      timeout: 5s
-      retries: 3
 
 
     
